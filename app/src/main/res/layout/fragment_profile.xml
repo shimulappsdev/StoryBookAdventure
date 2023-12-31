@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/back_ground"
+    tools:context=".fragments.ProfileFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profileImage"
+            android:src="@drawable/user"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/settingBtn"
+            android:src="@drawable/ic_baseline_settings_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_7sdp"
+            app:tint="@color/ash_white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/akaya_telivigala"
+            android:text="Md. Shimul Mia"
+            android:textColor="@color/ash_white"
+            android:textSize="@dimen/_15ssp"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            app:layout_constraintStart_toEndOf="@id/profileImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/profileImage"/>
+
+        <TextView
+            android:id="@+id/profileAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/akaya_telivigala"
+            android:text="Dhaka, Bangladesh"
+            android:textColor="@color/ash_white"
+            android:textSize="@dimen/_13ssp"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            app:layout_constraintStart_toEndOf="@id/profileImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileName"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/topCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_12sdp"
+            app:cardElevation="@dimen/_15sdp"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileImage">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_top_bg"
+                >
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="@dimen/_2sdp"
+                    android:layout_height="0dp"
+                    android:background="@color/ash_white"
+                    android:layout_marginVertical="@dimen/_3sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/statusCard"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/totalRead"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/archivo"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/card_back_new"
+                    android:text="Total Read"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:includeFontPadding="false"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginHorizontal="@dimen/_7sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/points"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/points"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/archivo"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/card_back_new"
+                    android:text="Earned"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:includeFontPadding="false"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginHorizontal="@dimen/_7sdp"
+                    app:layout_constraintStart_toEndOf="@id/totalRead"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/readBookAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/archivo_semibold"
+                    android:gravity="center_vertical"
+                    android:text="80"
+                    android:textColor="@color/ash_white"
+                    android:textSize="@dimen/_18ssp"
+                    android:textStyle="bold"
+                    android:includeFontPadding="false"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="@id/totalRead"
+                    app:layout_constraintHorizontal_bias="0.401"
+                    app:layout_constraintStart_toStartOf="@id/totalRead"
+                    app:layout_constraintTop_toBottomOf="@id/totalRead" />
+
+
+
+                <TextView
+                    android:id="@+id/pointAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/archivo_semibold"
+                    android:gravity="center_vertical"
+                    android:text="8000"
+                    android:textColor="@color/ash_white"
+                    android:textSize="@dimen/_18ssp"
+                    android:textStyle="bold"
+                    android:maxWidth="@dimen/_120sdp"
+                    android:layout_marginHorizontal="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:includeFontPadding="false"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="@id/points"
+                    app:layout_constraintHorizontal_bias="0.401"
+                    app:layout_constraintStart_toStartOf="@id/points"
+                    app:layout_constraintTop_toBottomOf="@id/points" />
+
+                <TextView
+                    android:id="@+id/book"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/archivo"
+                    android:text="Books"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:textColor="@color/ash"
+                    android:includeFontPadding="false"
+                    app:layout_constraintStart_toStartOf="@id/readBookAmount"
+                    app:layout_constraintEnd_toEndOf="@id/readBookAmount"
+                    app:layout_constraintTop_toBottomOf="@id/readBookAmount"/>
+
+                <TextView
+                    android:id="@+id/point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/archivo"
+                    android:text="Points"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:textColor="@color/ash"
+                    android:includeFontPadding="false"
+                    app:layout_constraintStart_toStartOf="@id/pointAmount"
+                    app:layout_constraintEnd_toEndOf="@id/pointAmount"
+                    app:layout_constraintTop_toBottomOf="@id/pointAmount"/>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/statusCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardElevation="@dimen/_10sdp"
+                    app:cardCornerRadius="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/book"
+                    >
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/reader_status_back"
+                        android:padding="@dimen/_7sdp"
+                        >
+                        <TextView
+                            android:id="@+id/readerStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/archivo"
+                            android:text="Early Reader"
+                            android:textColor="@color/sky"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_12ssp"
+                            android:includeFontPadding="false"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/currentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginTop="@dimen/_3sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topCard">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/profile_top_bg"
+                    >
+
+                    <TextView
+                        android:id="@+id/currentWeekTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current Week"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="bold"
+                        android:textColor="@color/card_back_new"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/currentWeekBookAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/archivo"
+                        android:text="5"
+                        android:textSize="@dimen/_17ssp"
+                        android:textStyle="bold"
+                        android:textColor="@color/ash_white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/currentWeekTxt"/>
+
+                    <TextView
+                        android:id="@+id/currentWeekBook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/archivo"
+                        android:text="Books"
+                        android:textColor="@color/ash"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/currentWeekBookAmount" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/profile_top_bg"
+                    >
+
+                    <TextView
+                        android:id="@+id/currentMonthTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current Month"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="bold"
+                        android:textColor="@color/card_back_new"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/currentMonthBookAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/archivo"
+                        android:text="15"
+                        android:textSize="@dimen/_17ssp"
+                        android:textStyle="bold"
+                        android:textColor="@color/ash_white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/currentMonthTxt"/>
+
+                    <TextView
+                        android:id="@+id/currentMonthBook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/archivo"
+                        android:text="Books"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/ash"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/currentMonthBookAmount"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:cardElevation="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/profile_top_bg"
+                    >
+
+                    <TextView
+                        android:id="@+id/lastMonthTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Month"
+                        android:textSize="@dimen/_10ssp"
+                        android:textStyle="bold"
+                        android:textColor="@color/card_back_new"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/lastMonthBookAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/archivo"
+                        android:text="35"
+                        android:textSize="@dimen/_17ssp"
+                        android:textStyle="bold"
+                        android:textColor="@color/ash_white"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/lastMonthTxt"/>
+
+                    <TextView
+                        android:id="@+id/lastMonthBook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/archivo"
+                        android:text="Books"
+                        android:textSize="@dimen/_10ssp"
+                        android:textColor="@color/ash"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/lastMonthBookAmount"/>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/currentlyReading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/archivo"
+            android:text="Currently Reading"
+            android:textColor="@color/sky"
+            android:textStyle="bold"
+            android:textSize="@dimen/_11ssp"
+            android:layout_margin="@dimen/_10sdp"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currentLayout"/>
+
+        <TextView
+            android:id="@+id/continueBookName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/archivo"
+            android:includeFontPadding="false"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="* Sherlock Holmes by Sir Aurther Conan Doyal * Sherlock Holmes by Sir Aurther Conan Doyal * Sherlock Holmes by Sir Aurther Conan Doyal *"
+            android:textColor="@color/ash_white"
+            android:textSize="@dimen/_10ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/currentlyReading" />
+
+        <TextView
+            android:id="@+id/tillNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/archivo"
+            android:text="Till Now Read"
+            android:textColor="@color/sky"
+            android:textStyle="bold"
+            android:textSize="@dimen/_11ssp"
+            android:layout_margin="@dimen/_10sdp"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/continueBookName"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tillNowRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"
+            android:orientation="horizontal"
+            tools:listitem="@layout/book_card_layout"
+            android:layout_margin="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tillNow"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_7sdp"
+    android:layout_marginHorizontal="@dimen/_15sdp"
+    app:cardElevation="@dimen/_10sdp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_5sdp"
+        android:background="@color/back">
+
+        <ImageView
+            android:id="@+id/notificationImage"
+            android:src="@drawable/placeholder"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/cancelBtn"
+            android:src="@drawable/ic_baseline_cancel_24"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/notificationDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:text="01-01-2023"
+            android:textSize="@dimen/_9ssp"
+            android:textColor="@color/ash_white"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toEndOf="@id/notificationImage"
+            app:layout_constraintTop_toBottomOf="@id/notificationName"/>
+
+        <TextView
+            android:id="@+id/notificationTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:text="12:00 PM"
+            android:textSize="@dimen/_9ssp"
+            android:textColor="@color/ash_white"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:includeFontPadding="false"
+            app:layout_constraintStart_toEndOf="@id/notificationImage"
+            app:layout_constraintTop_toBottomOf="@id/notificationDate"/>
+
+        <TextView
+            android:id="@+id/notificationName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_7sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/baloo"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="Notification Name"
+            android:textColor="@color/ash_white"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toStartOf="@id/cancelBtn"
+            app:layout_constraintHorizontal_bias="0.304"
+            app:layout_constraintStart_toEndOf="@id/notificationImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/descriptionScroll"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_55sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/notificationImage">
+
+            <TextView
+                android:id="@+id/notificationDescription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:fontFamily="@font/archivo"
+                android:includeFontPadding="false"
+                android:text="Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
+                android:textColor="@color/ash_white"
+                android:textSize="@dimen/_10ssp"
+                android:paddingTop="@dimen/_3sdp"
+                />
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

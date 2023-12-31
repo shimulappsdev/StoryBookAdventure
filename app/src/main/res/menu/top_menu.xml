@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_more_vert_24"
+        android:title="">
+
+        <menu>
+
+            <item android:title="item1"
+                android:icon="@drawable/home"
+                android:id="@+id/item1"
+                app:showAsAction="never"
+                />
+
+            <item android:title="item2"
+                android:icon="@drawable/home"
+                android:id="@+id/item2"
+                app:showAsAction="never"
+                />
+
+            <item android:title="item3"
+                android:icon="@drawable/home"
+                android:id="@+id/item3"
+                app:showAsAction="never"
+                />
+
+            <item android:title="item4"
+                android:icon="@drawable/home"
+                android:id="@+id/item4"
+                app:showAsAction="never"
+                />
+
+        </menu>
+
+    </item>
+
+</menu>

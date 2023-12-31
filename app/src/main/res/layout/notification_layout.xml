@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_8sdp"
+    app:cardElevation="@dimen/_8sdp"
+    android:layout_marginHorizontal="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_4sdp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_5sdp"
+        android:background="@color/back"
+        >
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/notificationIcon"
+            android:src="@drawable/notification"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:scaleType="centerCrop"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="@dimen/_2sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/notificationTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Notification"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/_9ssp"
+            android:includeFontPadding="false"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/notificationIcon"
+            app:layout_constraintEnd_toStartOf="@id/clearBtn"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/notificationDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/_8ssp"
+            android:includeFontPadding="false"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/notificationIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/notificationTitle"/>
+
+        <ImageView
+            android:id="@+id/clearBtn"
+            android:src="@drawable/ic_baseline_cancel_24"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:scaleType="centerCrop"
+            android:layout_marginBottom="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/notificationDescription"
+            />
+
+
+        <TextView
+            android:id="@+id/notificationDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/archivo"
+            android:text="01-01-2023"
+            android:textSize="@dimen/_8ssp"
+            android:textColor="@color/ash_white"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:includeFontPadding="false"
+            app:layout_constraintEnd_toStartOf="@id/notificationTime"
+            app:layout_constraintTop_toBottomOf="@id/notificationDescription"/>
+
+        <TextView
+            android:id="@+id/notificationTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/archivo"
+            android:text="12:00 PM"
+            android:textSize="@dimen/_8ssp"
+            android:textColor="@color/ash_white"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:includeFontPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/notificationDescription"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

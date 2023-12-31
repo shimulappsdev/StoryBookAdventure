@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">TaleTravers</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">Welcome</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="have_not_account">Have not any account?</string>
+    <string name="sign">Sign In</string>
+    <string name="register">Register</string>
+    <string name="forgot">Forgot password?</string>
+    <string name="search_hint">author or book name</string>
+    <string name="discover">Discover</string>
+    <string name="trending">Trending Now</string>
+    <string name="popular">Popular</string>
+    <string name="recommended">Recommended</string>
+    <string name="category">Categorise</string>
+    <string name="category_name">Category Name</string>
+    <string name="book">book name</string>
+    <string name="author">author name</string>
+    <string name="downloaded">Downloaded</string>
+    <string name="favourite">Favourite</string>
+    <string name="home">Home</string>
+    <string name="notifications">Notifications</string>
+    <string name="profile">Profile</string>
+    <string name="see_all">See All</string>
+    <string name="exit">No more read for now?</string>
+    <string name="see_you">Hope see you soon.!</string>
+    <string name="activity">Activities</string>
+    <string name="most_read">Most Read</string>
+    <string name="openNav">Drawer Open</string>
+    <string name="closeNav">Drawer Close</string>
+</resources>

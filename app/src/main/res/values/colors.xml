@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ash_white">#D8D8D8</color>
+    <color name="gray">#464749</color>
+    <color name="blue">#0D1282</color>
+    <color name="green">#68B984</color>
+    <color name="mint">#0B666A</color>
+    <color name="sky">#749BC2</color>
+    <color name="deep_sky">#E2F6CA</color>
+    <color name="dark_sky">#102849</color>
+    <color name="welcome">#6D8686</color>
+    <color name="back">#59677A</color>
+    <color name="trans">#80959595</color>
+    <color name="full_trans">#CE182433</color>
+    <color name="search_back">#5C515151</color>
+    <color name="back_ground">#191C27</color>
+    <color name="card_back">#2C3245</color>
+    <color name="book_card_back">#294455</color>
+    <color name="ash">#8A8D8F</color>
+    <color name="red">#B1455B</color>
+    <color name="cate_card_back">#A6000000</color>
+    <color name="card_back_new">#0B0E17</color>
+    <color name="tab_color1">#F2F2F2</color>
+    <color name="tab_color2">#339966</color>
+    <color name="log_back">#80000000</color>
+</resources>

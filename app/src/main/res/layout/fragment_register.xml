@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/registerLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.RegisterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dark_theme"
+            android:layout_width="@dimen/_160sdp"
+            android:layout_height="@dimen/_160sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo_png"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/log_back_design"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dark_theme"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/akaya_telivigala"
+                android:includeFontPadding="false"
+                android:text="@string/register"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_20ssp"
+                android:layout_marginTop="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/form_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:orientation="vertical"
+                android:padding="@dimen/_3sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/register">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/archivo_semibold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/edit_text_back"
+                    android:drawableLeft="@drawable/name_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/archivo"
+                    android:hint="enter name"
+                    android:textColorHint="@color/ash_white"
+                    android:padding="@dimen/_8sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/archivo_semibold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/archivo"
+                    android:hint="enter email"
+                    android:textColorHint="@color/ash_white"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:drawableLeft="@drawable/email_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:background="@drawable/edit_text_back"
+                    android:padding="@dimen/_8sdp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date of Birth"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/archivo_semibold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/archivo"
+                    android:hint="01-01-2000"
+                    android:textColorHint="@color/ash_white"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:drawableLeft="@drawable/date_of_birth_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:background="@drawable/edit_text_back"
+                    android:padding="@dimen/_8sdp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Password"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/archivo_semibold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/archivo"
+                    android:textColorHint="@color/ash_white"
+                    android:hint="enter password"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    android:drawableLeft="@drawable/password_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:background="@drawable/edit_text_back"
+                    android:padding="@dimen/_8sdp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Re-Password"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:fontFamily="@font/archivo_semibold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/archivo"
+                    android:hint="re-enter password"
+                    android:textColorHint="@color/ash_white"
+                    android:textColor="@color/ash_white"
+                    android:textSize="@dimen/_10ssp"
+                    android:drawableLeft="@drawable/password_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:background="@drawable/edit_text_back"
+                    android:padding="@dimen/_8sdp"
+                    />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:textSize="@dimen/_10ssp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginHorizontal="@dimen/_11sdp"
+                android:background="@drawable/edit_text_back"
+                android:fontFamily="@font/archivo_semibold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/form_layout"
+                app:layout_constraintBottom_toTopOf="@+id/bottom_layout"
+                />
+
+            <LinearLayout
+                android:id="@+id/bottom_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/submit_btn"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/have_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_40sdp"
+                    android:fontFamily="@font/ceviche_one"
+                    android:text="@string/have_account"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+                <TextView
+                    android:id="@+id/sign_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/edit_text_back"
+                    android:fontFamily="@font/ceviche_one"
+                    android:paddingHorizontal="@dimen/_8sdp"
+                    android:text="@string/sign"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp" />
+
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

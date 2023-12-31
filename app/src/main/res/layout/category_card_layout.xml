@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_2sdp"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/category_image"
+        android:src="@drawable/placeholder"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:civ_border_width="@dimen/_1sdp"
+        app:civ_border_color="@color/sky"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/oval_back"
+        android:backgroundTint="@color/cate_card_back"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/category_image"
+        app:layout_constraintEnd_toEndOf="@id/category_image"
+        app:layout_constraintTop_toTopOf="@id/category_image"
+        app:layout_constraintBottom_toBottomOf="@id/category_image">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/category_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/archivo"
+        android:text="@string/category_name"
+        android:textSize="@dimen/_7ssp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_marginHorizontal="@dimen/_2sdp"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@id/view"
+        app:layout_constraintTop_toTopOf="@id/view"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
