@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+//        project
+
         binding.bottomNav.setSelectedItemId(R.id.home);
         replaceFragment(new HomeFragment());
 
